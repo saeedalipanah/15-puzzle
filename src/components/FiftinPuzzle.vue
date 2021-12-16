@@ -96,12 +96,14 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 0.8rem;
-  background-color: gray;
+  background-color: #b7094c;
   border-radius: 1rem;
-  transform: rotateX(60deg);
-  box-shadow: rgba(0, 0, 0, 0.8) 0px 40px 10px, rgba(0, 0, 0, 0.7) 0px 15px 12px;
+  transform: rotateX(50deg);
+   box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 5px, rgba(0, 0, 0, 0.7) 0px 30px 10px;
   
     .item {
+      box-shadow: rgba(0, 0, 0, 0.8) 0px 10px 5px, rgba(0, 0, 0, 0.7) 0px 10px 10px;
+      border-radius: 10px;
       position: relative;
       font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
       display: flex;
@@ -109,15 +111,13 @@ export default {
       align-items: center;
       grid-column: 1;
       grid-row: 1;
-      font-size: 2.2rem;
+      font-size: 2.5rem;
       width: 100%;
       height: 100%;
-      color :white;
-      background-color: black;
+      color :black;
+      background-color: #98f5e1;
       perspective: 100px;
       &.empty-block{
-        background-color: red;
-        color: transparent;
         display: none;
       }
     }
