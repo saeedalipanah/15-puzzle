@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="wrapper">
+  <fiftin-puzzle></fiftin-puzzle>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import FiftinPuzzle from './components/FiftinPuzzle.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+ data(){
+
+ } ,
+ components:{
+   FiftinPuzzle,
+ }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+*{
+  margin: 0;
+  padding: 0;
+}
+.wrapper{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+    perspective: 800px;
+    perspective-origin: 50%;
 }
 </style>
