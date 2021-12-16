@@ -11,12 +11,13 @@ export default {
   data() {
     return {
       items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,-1],
+      victory:true,
     };
   },
   mounted() {
     window.addEventListener("keydown", this.movement);
     this.shuffle(this.items,15);
-   
+    this.win();
   },
   created(){
   },
@@ -75,6 +76,7 @@ export default {
           this.items[emptyBlock] = this.items[emptyBlock + 1];
           this.items[emptyBlock + 1] = v;
         }
+        this.win();
     },
      shuffle(array, len = array.length) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -83,6 +85,17 @@ export default {
         }
         return array.slice(0, len);
     },
+    win(){
+      this.victory =true;
+      this.items.forEach((element,i) => {
+       if(element != -1 && element != i+1){
+         this.victory =false;
+       }
+     });
+     if(this.victory === true){
+       alert('you win!')
+     }
+    }
   },
 };
 </script>
