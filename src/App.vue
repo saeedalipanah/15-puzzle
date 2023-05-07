@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <h2 class="header">fifteen Puzzle</h2>
     <transition name="win">
       <div v-if="victory" class="win">
         <div class="title">Congratulations! You win🎉</div>
@@ -7,7 +8,7 @@
       </div>
     </transition>
     <fiftin-puzzle @victory="win"></fiftin-puzzle>
-    <div class="construction">Use arrow keys to move blocks</div>
+    <div class="construction"><i class="fas fa-info-circle"></i> Use arrow keys(← →,↓ ↑) to move blocks</div>
   </div>
 </template>
 
@@ -47,7 +48,11 @@ export default {
   align-items: center;
   position: relative;
   perspective: 800px;
-  perspective-origin: 50%;
+  perspective-origin: center;
+  .header{
+    font-size: 35px;
+    text-transform: uppercase;
+  }
   .win {
     position: absolute;
     top: 240px;
@@ -55,12 +60,11 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 120px;
+    padding: 20px;
     color: white;
     border-radius: 5px;
     z-index: 5;
-    background: linear-gradient(to right, #b7094c, #61c2ad);
+    background: linear-gradient(to right, #67052b, #32675b);
     .title {
       font-size: 280%;
       margin-bottom: 5px;

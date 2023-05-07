@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, -1],
+      items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,-1],
       victory: true,
     };
   },
@@ -126,7 +126,6 @@ export default {
   border-radius: 1rem;
   transform: rotateX(30deg);
   box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 5px, rgba(0, 0, 0, 0.7) 0px 30px 10px;
-
   .item {
     box-shadow: rgba(0, 0, 0, 0.8) 0px 10px 5px,
       rgba(0, 0, 0, 0.7) 0px 10px 10px;
@@ -143,7 +142,6 @@ export default {
     height: 100%;
     color: black;
     background-color: #98f5e1;
-    perspective: 100px;
     &.empty-block {
       display: none;
     }
